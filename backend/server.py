@@ -4,13 +4,14 @@ No real rails, accounts, credentials, payments, or reversals are connected.
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs, unquote
-import json, sqlite3, hashlib, mimetypes
+import json, sqlite3, hashlib, mimetypes, os
 from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parents[1]
 WEB = ROOT / 'web'
 DB = ROOT / 'backend' / 'data' / 'shaas_demo.sqlite3'
-HOST, PORT = '127.0.0.1', 8765
+HOST = os.environ.get('SHAAS_HOST', '127.0.0.1')
+PORT = int(os.environ.get('PORT', '8765'))
 
 TXNS = [
  ('UPI-700413','UPI · Instant',43000,'Pending / Unknown','No final response','09m 42s','VPA masked · n***@upi','idem · a91c…7e10','unknown'),
@@ -188,4 +189,5 @@ def main():
  except KeyboardInterrupt:print('\nStopping SHAAS demo server.')
  finally:server.server_close()
 if __name__=='__main__':main()
+
 
