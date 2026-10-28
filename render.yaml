@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: shaas-banking-demo
+    runtime: python
+    plan: free
+    buildCommand: echo "No external packages required"
+    startCommand: python backend/server.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: SHAAS_HOST
+        value: 0.0.0.0
