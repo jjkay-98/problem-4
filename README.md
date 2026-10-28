@@ -2,6 +2,14 @@
 
 A local full-stack prototype of the self-healing banking transaction operations console. It demonstrates transaction monitoring, simulated status enquiries, reconciliation, maker-checker approvals, policy controls, and audit history.
 
+## Deploy the demo
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2Fjjkay-98%2Fproblem-4)
+
+Render will ask you to sign in, grant access to this private GitHub repository if needed, review the Blueprint, and approve deployment. Render supplies the app's public URL after the first deploy succeeds.
+
+The Blueprint uses Render's free web-service plan. Free services can sleep when idle and their local SQLite state is ephemeral, so demo changes may reset after sleep or redeploy. Use only synthetic data.
+
 ## Run locally
 
 Requires Python 3.9 or newer. The backend uses only the Python standard library.
@@ -11,12 +19,6 @@ python backend/server.py
 ```
 
 Open http://127.0.0.1:8765. The server binds to loopback locally and stores demo state in backend/data/shaas_demo.sqlite3.
-
-## Deploy to Render
-
-The repository includes a Render Blueprint at render.yaml. Connect the GitHub repository to Render, create a Blueprint from the repository, and deploy shaas-banking-demo. Render will assign the public onrender.com URL after the first successful deploy.
-
-The free service may spin down when idle, and its local SQLite file is ephemeral. Demo state can reset after sleep or redeploy. Use only synthetic data.
 
 ## Safety boundary
 
