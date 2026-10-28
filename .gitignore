@@ -1,0 +1,1 @@
+__pycache__/\n*.py[cod]\nbackend/data/*.sqlite3\nbackend/data/*.sqlite3-shm\nbackend/data/*.sqlite3-wal\n
