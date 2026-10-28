@@ -5,7 +5,7 @@ A banking transaction resilience demo with a multi-page dashboard, a Python API 
 ## Deploy to Vercel
 
 1. Import `https://github.com/jjkay-98/problem-4` in Vercel.
-2. Set the **Root Directory** to `banking-shaas`.
+2. Keep the **Root Directory** at the repository root (`./`).
 3. Leave the Framework Preset as **Other** and leave the Build Command blank. `vercel.json` serves the `web` folder.
 4. Deploy. Vercel will provide the public `*.vercel.app` address.
 
