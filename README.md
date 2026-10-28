@@ -4,7 +4,9 @@ A banking transaction resilience demo with a multi-page dashboard, a Python API 
 
 ## Deploy to Vercel
 
-1. Import `https://github.com/jjkay-98/problem-4` in Vercel.
+[Deploy this repository to Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjjkay-98%2Fproblem-4)
+
+1. Sign in to Vercel and grant access to `jjkay-98/problem-4` if prompted.
 2. Keep the **Root Directory** at the repository root (`./`).
 3. Leave the Framework Preset as **Other** and leave the Build Command blank. `vercel.json` serves the `web` folder.
 4. Deploy. Vercel will provide the public `*.vercel.app` address.
